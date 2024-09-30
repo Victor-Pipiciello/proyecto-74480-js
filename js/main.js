@@ -1,31 +1,33 @@
-let mensajeEntrada = prompt("Hola! Esta es tu lista actual de compras")
-
-const listaCompras = ["papa", "cebolla", "lechuga", "tomate"]
+const listaCompras = ["papa ", "cebolla ", "lechuga ", "tomate "]
 console.log(listaCompras.join(" - "))
 
-function Contar(){
+function contar(){
     console.log(listaCompras.length)
 }
 
-function Quitar(){
+function quitar(){
     listaCompras.pop()
 }
 
-let menu = parseInt(prompt("¿Qué deseas hacer? \n1- Contar \n2- Quitar \n3- Terminar"))
 
-while(menu !== 3){
-    switch(menu){
+let mensajeEntrada = alert("Hola! Esta es tu lista actual de compras: " + listaCompras)
+
+
+let menu = parseInt(prompt("¿Qué deseas hacer? \n1-contar \n2-quitar \n3-terminar"))
+
+while(menu !== 3) {
+    switch(menu) {
         case 1:
-            Contar()
+            contar()
             break
         case 2:
-            Quitar()
+            quitar()
             break
         default:
             alert("Opcion incorrecta, intente nuevamente")
             break
     }
     
-    let menu = parseInt(prompt("¿Qué deseas hacer? \n1- Contar \n2- Quitar \n3- Terminar"))
+    menu = parseInt(prompt("¿Qué deseas hacer? \n1- Contar \n2- Quitar \n3- Terminar"))
 
 }
